@@ -1,0 +1,66 @@
+@import "main-bx";
+
+.burger {
+  display: none;
+
+  @include m-tablet() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    margin-left: 20px;
+
+    span {
+      height: 2px;
+      background-color: $color_white;
+      transition: all 0.3s linear;
+      opacity: 1;
+
+      &:nth-child(1) {
+        width: 20px;
+        margin-bottom: 4px;
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 4px;
+        width: 20px;
+      }
+
+      &:nth-child(3) {
+        width: 20px;
+      }
+    }
+
+    &_active {
+      span {
+        opacity: .4;
+
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          margin-bottom: 0;
+          width: 20px;
+        }
+
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+          margin-bottom: 0;
+          margin-top: -2px;
+          width: 20px;
+        }
+
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include m-phone() {
+    margin-left: 10px;
+  }
+}

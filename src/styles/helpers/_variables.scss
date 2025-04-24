@@ -1,0 +1,29 @@
+$font_base: 'Inter', sans-serif;
+
+$color_black: #000000;
+$color_white: #FFFFFF;
+
+$color_background: #F9F4FF;
+
+$body_width: 1920px;
+
+$breaks: (
+        desktop_lg: 1600px,
+        desktop: 1440px,
+        laptop: 1380px,
+        tablet: 1100px,
+        tablet_md: 1024px,
+        mobile: 768px,
+        mobile_sm: 575px,
+        mobile_xs: 479px,
+        mobile_xxs: 375px,
+);
+
+$container: (
+        desktop_lg: 1400px,
+        desktop: 1140px,
+        laptop: 1024px,
+        tablet: 768px,
+        mobile: 345px,
+        mobile_xs: 280px,
+);

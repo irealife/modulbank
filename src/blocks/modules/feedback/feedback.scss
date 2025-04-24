@@ -1,0 +1,104 @@
+@import "main-bx";
+
+.feedback {
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 26px;
+    padding: 44.5px 50px 45.5px;
+
+    border-radius: 20px;
+    background-color: $color_background;
+
+    overflow: hidden;
+
+    @include m-tablet() {
+      padding: 25.5px 26px 19.5px;
+    }
+
+    @include m-phone() {
+      flex-direction: column;
+      padding: 20px 20px 0;
+    }
+  }
+
+  &__content {
+    width: 52%;
+
+    @include m-tablet() {
+      width: 69.2%;
+    }
+
+    @include m-phone() {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    bottom: -7px;
+    right: 0;
+
+    @include d-small() {
+
+    }
+
+    @include m-tablet() {
+      right: -218px;
+    }
+
+    @include m-phone() {
+      position: relative;
+      right: auto;
+    }
+
+    img {
+
+      @include m-tablet() {
+        height: 232px;
+      }
+
+      @include m-phone() {
+        height: auto;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 19px;
+
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 100%;
+
+    @include m-tablet() {
+      font-size: 30px;
+    }
+
+    @include m-phone() {
+      margin-bottom: 15px;
+
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+
+    @include m-tablet() {
+      font-size: 18px;
+    }
+
+    @include m-phone() {
+      font-size: 16px;
+    }
+  }
+
+}

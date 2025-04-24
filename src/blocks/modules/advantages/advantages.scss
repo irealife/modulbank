@@ -1,0 +1,50 @@
+@import "main-bx";
+
+.advantages {
+  margin: 50px 0;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    @include m-tablet() {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 30px;
+
+    border-left: 1px solid #0000001A;
+
+    @include m-phone() {
+      padding-left: 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+
+    @include m-phone() {
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    line-height: 150%;
+
+    @include m-tablet() {
+      font-size: 18px;
+    }
+
+    @include m-phone() {
+      font-size: 16px;
+    }
+  }
+}

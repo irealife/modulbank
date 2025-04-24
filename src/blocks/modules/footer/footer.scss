@@ -1,0 +1,46 @@
+@import "main-bx";
+
+.footer {
+    @include container();
+
+    @include from($break_lg) {
+        // desktop
+
+        &__col {
+            @include size(4);
+        }
+    }
+
+    @include from-to($break_md, $break_lg - 1) {
+        // tablet
+
+        &__col {
+            @include size(4);
+        }
+    }
+
+    @include to($break_md - 1) {
+        // mobile
+
+        &__col {
+            @include size(12);
+            margin-bottom: $offset_md;
+        }
+    }
+
+    // common
+
+    margin-top: 50px;
+    &__inner {
+        @include row-flex();
+    }
+    &__col {
+        @include col();
+
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #aaa;
+    }
+}

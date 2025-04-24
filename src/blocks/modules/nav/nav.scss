@@ -1,0 +1,72 @@
+@import "main-bx";
+
+.nav {
+
+  &__list {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include m-tablet() {
+      display: block;
+    }
+
+    > li {
+
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+
+      @include m-tablet() {
+        position: relative;
+        font-size: 14px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 45px;
+
+        @include m-tablet() {
+          margin-right: 0;
+        }
+      }
+      a {
+        color: $color_white;
+
+        @include m-tablet() {
+          color: $color_black;
+        }
+      }
+    }
+  }
+  &__item {
+
+    @include m-tablet() {
+      padding: 25px 15px;
+      > a {
+        display: flex;
+        padding: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: $color_white;
+      transition: all 0.3s linear;
+
+      @include m-tablet() {
+        color: #6F2DC2;
+      }
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+}
+

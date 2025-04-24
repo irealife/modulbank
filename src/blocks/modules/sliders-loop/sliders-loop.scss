@@ -1,0 +1,98 @@
+@import "main-bx";
+
+:root {
+  --animation-time: 15s;
+  --count-items: 9;
+}
+
+.sliders-loop {
+  background-color: $color_background;
+
+  &__container {
+
+  }
+
+  &__list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 250px);
+    width: 1200px;
+    margin: 0 auto;
+    padding: 19px 0 25px;
+    list-style: none;
+
+    overflow: hidden;
+
+    @include m-tablet() {
+      padding: 34px 0 25px;
+    }
+
+    @include m-phone() {
+      padding: 59px 0 25px;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 100%;
+      z-index: 2;
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      background: linear-gradient(to right, $color_background 0%, transparent 100%);
+    }
+
+    &:after {
+      top: 0;
+      right: 0;
+      background: linear-gradient(to left, $color_background 0%, transparent 100%);
+    }
+
+    &:hover .sliders-loop__item {
+      animation-play-state: paused;
+    }
+  }
+
+  &__item {
+    border-inline: 10px solid rgba(0, 0, 0, 0);
+    grid-area: 1 / 1;
+    display: flex;
+    align-items: center;
+
+    animation: scrolling var(--animation-time) linear infinite;
+    will-change: transform;
+
+    animation-delay: calc((1 - var(--i)) / var(--count-items) * var(--animation-time));
+  }
+
+  &__image {
+    flex-shrink: 0;
+    margin-right: 15px;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    white-space: nowrap;
+
+    @include m-phone() {
+      font-size: 16px;
+    }
+  }
+
+}
+
+@keyframes scrolling {
+  11.11% {
+    transform: translate(-100%);
+  }
+
+  11.12% {
+    transform: translate(800%);
+  }
+}

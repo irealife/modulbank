@@ -1,0 +1,49 @@
+@import "main-bx";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 60px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #A965ED 0%, #FA71CD 100%);
+  font-family: $font_base;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: center;
+  color: $color_white;
+
+  @include m-tablet() {
+    padding: 18.5px 26px;
+
+    font-size: 18px;
+  }
+
+  @include m-phone() {
+    height: 50px;
+    padding: 17px 24px;
+
+    font-size: 16px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: #A965ED;
+    color: $color_white;
+
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
+
+  &_light {
+    background: #6F2DC21A;
+    color: #6F2DC2;
+  }
+
+}

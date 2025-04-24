@@ -1,0 +1,57 @@
+@import "main-bx";
+
+.form {
+
+  &_row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+
+    @include m-phone() {
+      flex-direction: column;
+    }
+  }
+
+  &__field {
+
+    @include m-phone() {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    transition: all .3s linear;
+    height: 100%;
+    padding: 20px 20px;
+    border-radius: 10px;
+    background-color:$color_white;
+    border: 1px solid #6F2DC21A;
+    color: $color_black;
+    width: 100%;
+
+    @include m-tablet() {
+      font-size: 18px;
+    }
+
+    @include m-phone() {
+      padding: 14px 20px;
+      font-size: 16px;
+    }
+
+    &::placeholder {
+      color: #0000004D;
+    }
+  }
+
+  &__button {
+    white-space: nowrap;
+
+    @include m-phone() {
+      width: 100%;
+    }
+  }
+}
