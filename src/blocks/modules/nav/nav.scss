@@ -6,10 +6,12 @@
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 
     @include m-tablet() {
       display: block;
+      padding-bottom: 40px;
     }
 
     > li {
@@ -26,6 +28,10 @@
 
       &:not(:last-child) {
         margin-right: 45px;
+
+        @include below(1140px) {
+          margin-right: 30px;
+        }
 
         @include m-tablet() {
           margin-right: 0;

@@ -1,5 +1,6 @@
 ;(() => {
 
+    let body = document.querySelector('body');
     let header = document.querySelector('.header');
     let burger = header.querySelector('.js-burger');
     let headerNav = header.querySelector('.header__nav');
@@ -8,9 +9,11 @@
         if (burger.classList.contains('burger_active')) {
             burger.classList.remove('burger_active');
             headerNav.classList.remove('header__nav_active');
+            body.classList.remove('lock');
         } else {
             burger.classList.add('burger_active');
             headerNav.classList.add('header__nav_active');
+            body.classList.add('lock');
         }
     });
 

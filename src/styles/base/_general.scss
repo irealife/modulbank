@@ -82,6 +82,10 @@ body {
     }
 }
 
+body.lock {
+    overflow: hidden;
+}
+
 @keyframes fadeIn1 {
     0% {
         opacity: 0;
@@ -100,6 +104,7 @@ a {
 }
 
 .main {
+    padding-top: 60px;
     position: relative;
     flex-grow: 1;
 
